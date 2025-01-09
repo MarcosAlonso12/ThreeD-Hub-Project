@@ -1,9 +1,8 @@
-import { Home } from "./templates/Home";
+import { Home } from './templates/Home';
+import { Login } from './templates/Login';
 
 function App() {
-  return (
-    <Home children={'ola'}/>
-  );
+  return <Login />;
 }
 
 export default App;

@@ -1,21 +1,21 @@
 export const theme = {
-  colors : {
-    primary: "#62A658",
-    blue: "#1F9DED",
+  colors: {
+    primary: '#62A658',
+    blue: '#1F9DED',
     green: {
-      light: "#BED9BA",
-      medium: "#6AFC53",
-      dark: "#3B8C2E",
+      light: '#BED9BA',
+      medium: '#6AFC53',
+      dark: '#3B8C2E',
     },
-    red: "#FD606D",
-    white: "#ffffff",
-    whiteSecundary: "#f2f2f2",
-    gray: "#73716F",
-    lightGray: "#EDEDED",
-    black: "#26211F",
-    yellow: "#FFA959",
+    red: '#FD606D',
+    white: '#ffffff',
+    whiteSecundary: '#f2f2f2',
+    gray: '#73716F',
+    lightGray: '#EDEDED',
+    black: '#26211F',
+    yellow: '#FFA959',
   },
-  fonts : {
+  fonts: {
     family: {
       default: "'Open Sans', sans-serif",
       secondary: "'Montserrat', sans-serif",
@@ -40,4 +40,4 @@ export const theme = {
     xlarge: '42px',
     xxlarge: '48px',
   },
-}
+};
