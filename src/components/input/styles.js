@@ -9,19 +9,18 @@ ${({ theme }) => css`
   span {
     font-size: ${theme.fonts.sizes.xsamll};
     color: ${theme.colors.black};
+    font-weight: 600;
   }
-`}
-`;
 
-export const Input = styled.input`
-${({ theme }) => css`
-  width: 100%;
-  margin-top: ${theme.spacings.xxsmall};
-  border-radius: 16px;
-  border: none;
-  padding: 12px 8px;
-  color: ${theme.colors.gray};
-  background-color: ${theme.colors.whiteSecundary};
-  font-size: ${theme.fonts.sizes.xsamll}
+  input {
+    width: 100%;
+    margin-top: ${theme.spacings.xxsmall};
+    border-radius: 16px;
+    border: none;
+    padding: 12px 8px;
+    color: ${theme.colors.gray};
+    background-color: ${theme.colors.whiteSecundary};
+    font-size: ${theme.fonts.sizes.xsamll}
+  }
 `}
 `;
