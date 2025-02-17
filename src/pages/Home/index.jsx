@@ -4,10 +4,11 @@ import * as Styled from './styles';
 import { useEffect, useRef, useState } from 'react';
 
 import { HeaderContainer } from '../../components/headerContainer';
-import { RequestOrders } from '../../components/RequestOrders';
+import { RequestOrders } from '../../components/requestOrders';
+import { NewRequest } from '../../components/newRequest';
 
 export const Home = ({ children }) => {
-  const [selectedComponent, setSelectedComponent] = useState('pedidos');
+  const [selectedComponent, setSelectedComponent] = useState('requests');
   const [menuOpen, setMenuOpen] = useState(false);
   const menuRef = useRef(null);
 
@@ -42,8 +43,11 @@ export const Home = ({ children }) => {
         handleSelectedComponent={handleSelectedComponent}
       />
 
-      {selectedComponent == 'pedidos' && <RequestOrders />}
-      {selectedComponent == 'conta' && ''}
+      {selectedComponent == 'requests' && (
+        <RequestOrders handleComponent={handleSelectedComponent} />
+      )}
+      {selectedComponent == 'newRequest' && <NewRequest />}
+      {selectedComponent == 'account' && ''}
     </Styled.Container>
   );
 };

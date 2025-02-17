@@ -16,7 +16,7 @@ ${({ theme }) => css`
   background-color: ${theme.colors.lightGray};
   font-size: ${theme.fonts.sizes.xsamll};
   font-weight: bold;
-
+  z-index: 1;
   border-radius: 20px;
 
   nav {

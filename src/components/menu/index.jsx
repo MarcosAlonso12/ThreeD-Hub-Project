@@ -17,10 +17,10 @@ export const Menu = ({
       {menuOpen ? (
         <Styled.ContainerMenu>
           <nav>
-            <Link onClick={() => handleSelectedComponent('pedidos')}>
+            <Link onClick={() => handleSelectedComponent('requests')}>
               Meus pedidos
             </Link>
-            <Link onClick={() => handleSelectedComponent('conta')}>
+            <Link onClick={() => handleSelectedComponent('account')}>
               Minha conta
             </Link>
             <Link to="/">Sair</Link>

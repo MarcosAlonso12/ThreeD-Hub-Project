@@ -1,9 +1,9 @@
 import P from 'prop-types';
 import * as Styled from './styles';
 
-export const Input = ({ name, children }) => {
+export const Input = ({ name, children, width, heigth }) => {
   return (
-    <Styled.Container>
+    <Styled.Container width={width} height={heigth}>
       <span>{name}</span>
       {children}
     </Styled.Container>
@@ -13,4 +13,6 @@ export const Input = ({ name, children }) => {
 Input.propTypes = {
   name: P.string,
   children: P.node.isRequired,
+  width: P.string,
+  heigth: P.string,
 };

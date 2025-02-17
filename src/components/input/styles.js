@@ -1,10 +1,11 @@
 import styled, { css } from 'styled-components';
 
 export const Container = styled.div`
-${({ theme }) => css`
+${({ theme, width, heigth }) => css`
   display:flex;
   flex-direction: column;
-  width: 100%;
+  width: ${width ? width : '100%'};
+
 
   span {
     font-size: ${theme.fonts.sizes.xsamll};
@@ -12,8 +13,8 @@ ${({ theme }) => css`
     font-weight: 600;
   }
 
-  input {
-    width: 100%;
+  input, select, label{
+    height: ${heigth ? heigth : '100%'};
     margin-top: ${theme.spacings.xxsmall};
     border-radius: 16px;
     border: none;
@@ -21,6 +22,11 @@ ${({ theme }) => css`
     color: ${theme.colors.gray};
     background-color: ${theme.colors.whiteSecundary};
     font-size: ${theme.fonts.sizes.xsamll}
+  }
+
+  label {
+    text-align: center;
+    padding: 40px 50px;
   }
 `}
 `;

@@ -6,8 +6,8 @@ import { CiFilter } from 'react-icons/ci';
 import { IoIosAdd } from 'react-icons/io';
 import { useState } from 'react';
 
-export const RequestOrders = ({ children }) => {
-  const [hasOrdes, setHasOrdes] = useState(false);
+export const RequestOrders = ({ handleComponent }) => {
+  const [order, serOrder] = useState('');
 
   return (
     <Styled.Container>
@@ -15,14 +15,14 @@ export const RequestOrders = ({ children }) => {
         <h1>Solicitações</h1>
         <CiFilter size={25} />
       </Styled.Title>
-      {hasOrdes == false && (
+      {order.length == 0 && (
         <Styled.NoOrdes>
           <BsFillBoxSeamFill size={80} />
           <span>Você não possui solicitações em análise.</span>
         </Styled.NoOrdes>
       )}
-      {hasOrdes}
-      <Styled.NewOrder>
+      {order.length != 0 && order}
+      <Styled.NewOrder onClick={() => handleComponent('newRequest')}>
         <IoIosAdd size={40} color="#fff" />
       </Styled.NewOrder>
     </Styled.Container>
@@ -30,5 +30,5 @@ export const RequestOrders = ({ children }) => {
 };
 
 RequestOrders.propTypes = {
-  children: P.node.isRequired,
+  handleComponent: P.func.isRequired,
 };

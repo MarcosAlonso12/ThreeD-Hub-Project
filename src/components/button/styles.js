@@ -1,7 +1,7 @@
 import styled, { css } from 'styled-components';
 
 export const Button = styled.div`
-${({ theme }) => css`
+${({ theme, type }) => css`
   width: 100%;
 
   button {
@@ -9,7 +9,7 @@ ${({ theme }) => css`
     padding: 12px 16px;
     border: none;
     border-radius: 16px;
-    background-color: ${theme.colors.primary};
+    background-color: ${type == 'remove' ? theme.colors.red : theme.colors.primary};
     color: ${theme.colors.white};
     font-size: ${theme.fonts.sizes.small};
   }
