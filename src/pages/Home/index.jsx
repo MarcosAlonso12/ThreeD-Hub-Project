@@ -4,7 +4,7 @@ import * as Styled from './styles';
 import { useEffect, useRef, useState } from 'react';
 
 import { HeaderContainer } from '../../components/headerContainer';
-import { RequestOrders } from '../../components/requestOrders';
+import { RequestOrders } from '../../components/RequestOrders';
 import { NewRequest } from '../../components/newRequest';
 
 export const Home = ({ children }) => {
