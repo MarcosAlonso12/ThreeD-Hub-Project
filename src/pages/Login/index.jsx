@@ -1,4 +1,3 @@
-import P from 'prop-types';
 import * as Styled from './styles';
 import { Input } from '../../components/input';
 import { Button } from '../../components/button';

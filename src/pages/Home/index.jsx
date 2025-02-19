@@ -1,13 +1,12 @@
-import P from 'prop-types';
 import * as Styled from './styles';
 
 import { useEffect, useRef, useState } from 'react';
 
 import { HeaderContainer } from '../../components/headerContainer';
-import { RequestOrders } from '../../components/RequestOrders';
+import { RequestOrders } from '../../components/requestOrders';
 import { NewRequest } from '../../components/newRequest';
 
-export const Home = ({ children }) => {
+export const Home = () => {
   const [selectedComponent, setSelectedComponent] = useState('requests');
   const [menuOpen, setMenuOpen] = useState(false);
   const menuRef = useRef(null);
@@ -50,8 +49,4 @@ export const Home = ({ children }) => {
       {selectedComponent == 'account' && ''}
     </Styled.Container>
   );
-};
-
-Home.propTypes = {
-  children: P.node.isRequired,
 };
