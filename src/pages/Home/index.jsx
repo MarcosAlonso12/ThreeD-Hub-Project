@@ -5,11 +5,13 @@ import { useEffect, useRef, useState } from 'react';
 import { HeaderContainer } from '../../components/headerContainer';
 import { NewRequest } from '../../components/newRequest';
 import { RequestOrders } from '../../components/requestsOrders';
+import { ActionPerformed } from '../../components/actionPerformed';
 
 export const Home = () => {
   const [selectedComponent, setSelectedComponent] = useState('requests');
   const [menuOpen, setMenuOpen] = useState(false);
   const menuRef = useRef(null);
+  const [orders, setOrders] = useState(0);
 
   const handleSelectedComponent = (componente) => {
     setSelectedComponent(componente);
@@ -43,9 +45,28 @@ export const Home = () => {
       />
 
       {selectedComponent === 'requests' && (
-        <RequestOrders handleComponent={handleSelectedComponent} />
+        <RequestOrders
+          orders={orders}
+          handleComponent={handleSelectedComponent}
+        />
       )}
-      {selectedComponent === 'newRequest' && <NewRequest />}
+      {selectedComponent === 'newRequest' && (
+        <NewRequest
+          orders={orders}
+          setOrders={setOrders}
+          handleComponent={handleSelectedComponent}
+        />
+      )}
+      {selectedComponent === 'acitionPerformed' && (
+        <ActionPerformed
+          title="Pedido #001 realizado com sucesso!"
+          descripton="Você pode acompanhar o seu pedido na aba de pedidos."
+        >
+          <button onClick={() => handleSelectedComponent('requests')}>
+            Avança
+          </button>
+        </ActionPerformed>
+      )}
       {selectedComponent === 'account' && ''}
     </Styled.Container>
   );

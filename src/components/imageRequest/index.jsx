@@ -48,7 +48,7 @@ export const ImageRequest = ({ children, images, setImage }) => {
       {images.length !== 0 &&
         images.map((img, index) => (
           <Styled.ImageConteiner key={index}>
-            <img src={img} alt='' />
+            <img src={img} alt="" />
             <Button type="remove">
               <button onClick={() => removeImg(index)}>Remover Imagem</button>
             </Button>

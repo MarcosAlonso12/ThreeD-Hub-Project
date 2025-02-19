@@ -7,13 +7,18 @@ import { ImageRequest } from '../imageRequest';
 import { Button } from '../button';
 import { useState } from 'react';
 
-export const NewRequest = ({ children }) => {
+export const NewRequest = ({ setOrders, handleComponent }) => {
   const [formSelected, setformSelected] = useState('form');
   const [images, setImage] = useState([]);
 
   const handleFomr = () => {
     const selected = formSelected === 'form' ? 'formImage' : 'form';
     setformSelected(selected);
+  };
+
+  const submitOrder = () => {
+    setOrders(1);
+    handleComponent('acitionPerformed');
   };
 
   return (
@@ -43,7 +48,7 @@ export const NewRequest = ({ children }) => {
         <ImageRequest images={images} setImage={setImage} />
       )}
       <Button>
-        <button className="button">Realizar pedido</button>
+        <button onClick={() => submitOrder()}>Realizar pedido</button>
       </Button>
     </Styled.Container>
   );
@@ -51,4 +56,6 @@ export const NewRequest = ({ children }) => {
 
 NewRequest.propTypes = {
   children: P.node.isRequired,
+  setOrders: P.func.isRequired,
+  handleComponent: P.func.isRequired,
 };
