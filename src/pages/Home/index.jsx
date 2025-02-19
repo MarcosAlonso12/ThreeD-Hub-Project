@@ -3,8 +3,8 @@ import * as Styled from './styles';
 import { useEffect, useRef, useState } from 'react';
 
 import { HeaderContainer } from '../../components/headerContainer';
-import { RequestOrders } from '../../components/requestOrders';
 import { NewRequest } from '../../components/newRequest';
+import { RequestOrders } from '../../components/requestOrders';
 
 export const Home = () => {
   const [selectedComponent, setSelectedComponent] = useState('requests');
