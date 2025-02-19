@@ -4,7 +4,7 @@ import { useEffect, useRef, useState } from 'react';
 
 import { HeaderContainer } from '../../components/headerContainer';
 import { NewRequest } from '../../components/newRequest';
-import { RequestOrders } from '../../components/requestOrders';
+import { RequestOrders } from '../../components/requestsOrders';
 
 export const Home = () => {
   const [selectedComponent, setSelectedComponent] = useState('requests');
