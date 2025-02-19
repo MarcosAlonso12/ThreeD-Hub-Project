@@ -9,7 +9,7 @@ ${({ theme, type }) => css`
     padding: 12px 16px;
     border: none;
     border-radius: 16px;
-    background-color: ${type == 'remove' ? theme.colors.red : theme.colors.primary};
+    background-color: ${type === 'remove' ? theme.colors.red : theme.colors.primary};
     color: ${theme.colors.white};
     font-size: ${theme.fonts.sizes.small};
   }

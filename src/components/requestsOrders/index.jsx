@@ -7,7 +7,7 @@ import { IoIosAdd } from 'react-icons/io';
 import { useState } from 'react';
 
 export const RequestOrders = ({ handleComponent }) => {
-  const [order, serOrder] = useState('');
+  const [order] = useState('');
 
   return (
     <Styled.Container>
@@ -15,13 +15,13 @@ export const RequestOrders = ({ handleComponent }) => {
         <h1>Solicitações</h1>
         <CiFilter size={25} />
       </Styled.Title>
-      {order.length == 0 && (
+      {order.length === 0 && (
         <Styled.NoOrdes>
           <BsFillBoxSeamFill size={80} />
           <span>Você não possui solicitações em análise.</span>
         </Styled.NoOrdes>
       )}
-      {order.length != 0 && order}
+      {order.length !== 0 && order}
       <Styled.NewOrder onClick={() => handleComponent('newRequest')}>
         <IoIosAdd size={40} color="#fff" />
       </Styled.NewOrder>

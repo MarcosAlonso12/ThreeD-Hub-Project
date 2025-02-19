@@ -12,34 +12,34 @@ export const NewRequest = ({ children }) => {
   const [images, setImage] = useState([]);
 
   const handleFomr = () => {
-    const selected = formSelected == 'form' ? 'formImage' : 'form';
+    const selected = formSelected === 'form' ? 'formImage' : 'form';
     setformSelected(selected);
   };
 
   return (
     <Styled.Container>
-      {formSelected == 'form' && (
+      {formSelected === 'form' && (
         <Header
           title="Realizar Pedido"
           descripton="Preencha o formulário abaixo para realizar sua solicitação."
         />
       )}
-      {formSelected == 'formImage' && (
+      {formSelected === 'formImage' && (
         <Header
           title="Realizar Pedido"
           descripton="Adicione imagens do objeto que deseja obter."
         />
       )}
       <Styled.FormContainer onClick={() => handleFomr()}>
-        <span className={formSelected == 'form' ? 'selected' : ''}>
+        <span className={formSelected === 'form' ? 'selected' : ''}>
           Formulário
         </span>
-        <span className={formSelected == 'formImage' ? 'selected' : ''}>
+        <span className={formSelected === 'formImage' ? 'selected' : ''}>
           Imagens
         </span>
       </Styled.FormContainer>
-      {formSelected == 'form' && <FormRequest />}
-      {formSelected == 'formImage' && (
+      {formSelected === 'form' && <FormRequest />}
+      {formSelected === 'formImage' && (
         <ImageRequest images={images} setImage={setImage} />
       )}
       <Button>

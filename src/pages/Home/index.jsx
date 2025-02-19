@@ -42,11 +42,11 @@ export const Home = () => {
         handleSelectedComponent={handleSelectedComponent}
       />
 
-      {selectedComponent == 'requests' && (
+      {selectedComponent === 'requests' && (
         <RequestOrders handleComponent={handleSelectedComponent} />
       )}
-      {selectedComponent == 'newRequest' && <NewRequest />}
-      {selectedComponent == 'account' && ''}
+      {selectedComponent === 'newRequest' && <NewRequest />}
+      {selectedComponent === 'account' && ''}
     </Styled.Container>
   );
 };

@@ -1,7 +1,6 @@
 import P from 'prop-types';
 import * as Styled from './styles';
 import { Input } from '../input';
-import { useEffect, useState } from 'react';
 import { Button } from '../button';
 
 export const ImageRequest = ({ children, images, setImage }) => {
@@ -46,10 +45,10 @@ export const ImageRequest = ({ children, images, setImage }) => {
         />
         <label htmlFor="image">Clique aqui ou arraste e solte</label>
       </Input>
-      {images.length != 0 &&
+      {images.length !== 0 &&
         images.map((img, index) => (
           <Styled.ImageConteiner key={index}>
-            <img src={img} />
+            <img src={img} alt='image' />
             <Button type="remove">
               <button onClick={() => removeImg(index)}>Remover Imagem</button>
             </Button>

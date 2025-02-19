@@ -37,6 +37,9 @@ export const Register = () => {
         </section>
       );
       break;
+    default:
+      <h1>Erro 404 - Pagina não encontrada</h1>
+      break;
   }
 
   return (
